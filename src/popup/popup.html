@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Focus Mode</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="yt-focus-container">
+        <header class="yt-focus-header">
+            <div>
+                <img class="yt-focus-youtube-logo" src="../icons/youtube.png" alt="">
+            </div>
+            <div>
+                <h1 class="yt-focus-focus-mode-text">YouTube Focus Mode</h1>
+            </div>
+        </header>
+
+        <div class="yt-focus-controls">
+            <div class="yt-focus-control-item">
+                <span class="yt-focus-control-label">Home Feed</span>
+                <div class="yt-focus-switch" data-setting="hideHomeFeed"></div>
+            </div>
+
+            <div class="yt-focus-control-item">
+                <span class="yt-focus-control-label">Home Left Sidebar</span>
+                <div class="yt-focus-switch" data-setting="hideHomeLeftSidebar"></div>
+            </div>
+
+            <div class="yt-focus-control-item">
+                <span class="yt-focus-control-label">Shorts</span>
+                <div class="yt-focus-switch" data-setting="hideShorts"></div>
+            </div>
+
+            <div class="yt-focus-control-item">
+                <span class="yt-focus-control-label">Playables</span>
+                <div class="yt-focus-switch" data-setting="hidePlayables"></div>
+            </div>
+
+            <div class="yt-focus-control-item">
+                <span class="yt-focus-control-label">Comments</span>
+                <div class="yt-focus-switch" data-setting="hideComments"></div>
+            </div>
+
+            <div class="yt-focus-control-item">
+                <span class="yt-focus-control-label">Search Recommendations</span>
+                <div class="yt-focus-switch" data-setting="hideSearchRecommendations"></div>
+            </div>
+
+            <div class="yt-focus-control-item">
+                <span class="yt-focus-control-label">On-watch Recommendations</span>
+                <div class="yt-focus-switch" data-setting="hideOnWatchRecommendations"></div>
+            </div>
+        </div>
+        <div class="yt-focus-footer">Control your distractions</div>
+    </div>
+
+    <script src="./popup.js"></script>
+</body>
+
+</html>

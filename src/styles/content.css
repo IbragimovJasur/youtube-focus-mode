@@ -1,0 +1,59 @@
+/* Home Feed */
+html.yt-focus-home-feed-hidden ytd-browse[page-subtype="home"],
+html.yt-focus-home-feed-hidden ytd-two-column-browse-results-renderer,
+html.yt-focus-home-feed-hidden ytd-rich-grid-renderer,
+html.hide-home-feed #contents.ytd-rich-grid-renderer {
+    display: none !important;
+}
+
+/* Home Feed Left Sidebar */
+html.yt-focus-home-left-sidebar-hidden #guide-content,
+html.yt-focus-home-left-sidebar-hidden ytd-guide-renderer,
+html.yt-focus-home-left-sidebar-hidden ytd-mini-guide-renderer,
+html.yt-focus-home-left-sidebar-hidden #guide,
+html.yt-focus-home-left-sidebar-hidden tp-yt-app-drawer {
+    display: none !important;
+}
+
+/* Shorts */
+html.yt-focus-shorts-hidden ytd-rich-shelf-renderer[is-shorts] {
+    display: none !important;
+}
+
+html.yt-focus-shorts-hidden ytd-reel-shelf-renderer,
+html.yt-focus-shorts-hidden ytm-shorts-lockup-view-model-v2 {
+    display: none !important;
+}
+
+html.yt-focus-shorts-hidden grid-shelf-view-model,
+html.yt-focus-shorts-hidden ytm-shorts-lockup-view-model-v2,
+html.yt-focus-shorts-hidden ytm-shorts-lockup-view-model {
+    display: none !important;
+}
+
+/* Playables */
+html.yt-focus-playables-hidden ytd-rich-item-renderer[is-mini-game-card-shelf],
+html.yt-focus-playables-hidden ytd-rich-shelf-renderer:has(ytd-rich-item-renderer[is-mini-game-card-shelf]) {
+    display: none !important;
+}
+
+/* Comments */
+html.yt-focus-comments-hidden ytd-comments#comments,
+html.yt-focus-comments-hidden ytd-comment-thread-renderer {
+    display: none !important;
+}
+
+/* Search Recommendations */
+html.yt-focus-search-recommendations-hidden yt-searchbox [role="listbox"],
+html.yt-focus-search-recommendations-hidden ytSearchboxComponentSuggestionsContainer,
+html.yt-focus-search-recommendations-hidden ytSuggestionComponentSuggestion {
+    display: none !important;
+}
+
+/* On-Watch Recommendations */
+html.yt-focus-onwatch-recommendations-hidden #secondary,
+html.yt-focus-onwatch-recommendations-hidden #secondary-inner,
+html.yt-focus-onwatch-recommendations-hidden #related,
+html.yt-focus-onwatch-recommendations-hidden ytd-watch-next-secondary-results-renderer {
+    display: none !important;
+}
