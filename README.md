@@ -9,7 +9,7 @@
 
 ---
 
-🎯 **YouTube Focus Mode** is available here: [Chrome](https://chromewebstore.google.com)
+🎯 **YouTube Focus Mode** is available here: [Chrome](https://chromewebstore.google.com/detail/youtube-focus-mode-%E2%80%93-no-d/iojlgfppmfhnlmmohajhofjjgnhkcmbg)
 
 
 ## Features
