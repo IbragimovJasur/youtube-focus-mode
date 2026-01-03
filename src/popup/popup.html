@@ -10,55 +10,123 @@
 
 <body>
     <div class="yt-focus-container">
-        <header class="yt-focus-header">
-            <div>
-                <img class="yt-focus-youtube-logo" src="../icons/youtube.png" alt="">
+        <header>
+            <div class="yt-focus-header">
+                <div class="yt-focus-youtube-logo-container">
+                    <img class="yt-focus-youtube-logo" src="../icons/youtube.png" alt="">
+                </div>
+                <div class="yt-focus-mode-container">
+                    <h1 class="yt-focus-mode-text">Focus Mode</h1>
+                </div>
             </div>
-            <div>
-                <h1 class="yt-focus-focus-mode-text">YouTube Focus Mode</h1>
+
+            <div class="yt-focus-view-toggle" role="group" aria-label="View mode">
+                <button class="yt-focus-toggle-btn is-active" data-view="focus" aria-pressed="true">
+                    <svg class="yt-focus-toggle-btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+                    </svg>
+                    Focus
+                </button>
+
+                <button class="yt-focus-toggle-btn" data-view="stats" aria-pressed="false">
+                    <svg class="yt-focus-toggle-btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M3 3v18h18M7 16v-5M12 16V8M17 16v-3" />
+                    </svg>
+                    Stats
+                </button>
             </div>
         </header>
 
-        <div class="yt-focus-controls">
-            <div class="yt-focus-control-item">
-                <span class="yt-focus-control-label">Home Feed</span>
-                <div class="yt-focus-switch" data-setting="hideHomeFeed"></div>
-            </div>
 
-            <div class="yt-focus-control-item">
-                <span class="yt-focus-control-label">Home Left Sidebar</span>
-                <div class="yt-focus-switch" data-setting="hideHomeLeftSidebar"></div>
-            </div>
+        <div class="yt-focus-view-content">
+            <!-- Focus View (default) -->
+            <section class="yt-focus-view-panel is-active" data-view-panel="focus">
+                <div class="yt-focus-controls">
+                    <div class="yt-focus-control-item">
+                        <span class="yt-focus-control-label">Home Feed</span>
+                        <div class="yt-focus-switch" data-setting="hideHomeFeed"></div>
+                    </div>
 
-            <div class="yt-focus-control-item">
-                <span class="yt-focus-control-label">Shorts</span>
-                <div class="yt-focus-switch" data-setting="hideShorts"></div>
-            </div>
+                    <div class="yt-focus-control-item">
+                        <span class="yt-focus-control-label">Home Left Sidebar</span>
+                        <div class="yt-focus-switch" data-setting="hideHomeLeftSidebar"></div>
+                    </div>
 
-            <div class="yt-focus-control-item">
-                <span class="yt-focus-control-label">Playables</span>
-                <div class="yt-focus-switch" data-setting="hidePlayables"></div>
-            </div>
+                    <div class="yt-focus-control-item">
+                        <span class="yt-focus-control-label">Shorts</span>
+                        <div class="yt-focus-switch" data-setting="hideShorts"></div>
+                    </div>
 
-            <div class="yt-focus-control-item">
-                <span class="yt-focus-control-label">Comments</span>
-                <div class="yt-focus-switch" data-setting="hideComments"></div>
-            </div>
+                    <div class="yt-focus-control-item">
+                        <span class="yt-focus-control-label">Playables</span>
+                        <div class="yt-focus-switch" data-setting="hidePlayables"></div>
+                    </div>
 
-            <div class="yt-focus-control-item">
-                <span class="yt-focus-control-label">Search Recommendations</span>
-                <div class="yt-focus-switch" data-setting="hideSearchRecommendations"></div>
-            </div>
+                    <div class="yt-focus-control-item">
+                        <span class="yt-focus-control-label">Comments</span>
+                        <div class="yt-focus-switch" data-setting="hideComments"></div>
+                    </div>
 
-            <div class="yt-focus-control-item">
-                <span class="yt-focus-control-label">On-watch Recommendations</span>
-                <div class="yt-focus-switch" data-setting="hideOnWatchRecommendations"></div>
-            </div>
+                    <div class="yt-focus-control-item">
+                        <span class="yt-focus-control-label">Search Recommendations</span>
+                        <div class="yt-focus-switch" data-setting="hideSearchRecommendations"></div>
+                    </div>
+
+                    <div class="yt-focus-control-item">
+                        <span class="yt-focus-control-label">On-watch Recommendations</span>
+                        <div class="yt-focus-switch" data-setting="hideOnWatchRecommendations"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats View -->
+            <section class="yt-focus-view-panel" data-view-panel="stats">
+                <div class="yt-focus-stats-dropdown">
+                    <button class="yt-focus-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
+                        <span class="yt-focus-selected-time">Today</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-down-icon">
+                            <path d="m6 9 6 6 6-6" />
+                        </svg>
+                    </button>
+                    <ul class="yt-focus-dropdown-options" role="listbox">
+                        <li class="yt-focus-dropdown-option" role="option" data-value="today">Today</li>
+                        <li class="yt-focus-dropdown-option" role="option" data-value="week">This Week</li>
+                        <li class="yt-focus-dropdown-option" role="option" data-value="month">This Month</li>
+                        <li class="yt-focus-dropdown-option" role="option" data-value="all">All Time</li>
+                    </ul>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="yt-focus-stats">
+                    <div class="yt-focus-stat-card">
+                        <p class="yt-focus-stat-label">Shorts Avoided 🎯</p>
+                        <p class="yt-focus-stat-value" id="stat-shorts">0</p>
+                        <p class="yt-focus-stat-hint">distractions blocked</p>
+                    </div>
+
+                    <div class="yt-focus-stat-card">
+                        <p class="yt-focus-stat-label">Videos Avoided ✅</p>
+                        <p class="yt-focus-stat-value" id="stat-videos">0</p>
+                        <p class="yt-focus-stat-hint">recommendations blocked</p>
+                    </div>
+
+                    <div class="yt-focus-stat-card">
+                        <p class="yt-focus-stat-label">Minutes Spent 🚨</p>
+                        <p class="yt-focus-stat-value" id="stat-time-spent">0</p>
+                        <p class="yt-focus-stat-hint">YouTube usage in minutes</p>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="yt-focus-footer">Control your distractions</div>
-    </div>
 
-    <script src="./popup.js"></script>
+        <footer class="yt-focus-footer">
+            Control your distractions
+        </footer>
+
+        <script src="./popup.js"></script>
 </body>
 
 </html>

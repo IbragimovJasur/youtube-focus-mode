@@ -19,6 +19,17 @@
 |--------|-------|
 | ![Home Feed Before](./screenshots/home-feed/home-feed.png) | ![Home Feed After](./screenshots/home-feed/home-feed-hidden.png) |
 
+### 📊 Stats
+| Today | This Week |
+|--------|-------|
+| ![Today](./screenshots/stats/today.png) | ![This Week ](./screenshots/stats/this-week.png) |
+
+
+| This Month | All Time |
+|--------|-------|
+| ![This Month](./screenshots/stats/this-month.png) | ![All Time](./screenshots/stats/all-time.png) |
+
+
 ### 🎯 Hide Shorts
 | Before | After |
 |--------|-------|
@@ -62,12 +73,18 @@
 │   │   ├── popup.html
 │   │   └── popup.js
 │   ├── scripts/
+│   │   ├── features/
+|   │   │   ├── home-feed.js
+|   │   │   ├── on-watch-recommendations.js
+|   │   │   ├── shorts.js
 │   │   ├── content.js
+│   │   ├── storage.js
 │   ├── styles/
 │   │   ├── content.css
 │   └── manifest.json
 ├── .gitignore
 ├── LICENSE
+└── PRIVACY.md
 └── README.md
 ```
 

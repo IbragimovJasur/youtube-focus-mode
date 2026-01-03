@@ -4,68 +4,110 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* Background Colors */
+    --bg-muted: rgb(246, 245, 245);
+    --bg-active: rgb(220, 40, 40);
+    --bg-white: #ffffff;
+    --bg-switch-inactive: rgb(232, 232, 232);
+
+    /* Text Colors */
+    --text-muted: hsl(220 10% 45%);
+    --text-active: #ffffff;
+    --text-primary: #1e3a4f;
+    --text-secondary: #64748b;
+    --text-tertiary: #6b7280;
+    --text-hover: hsl(210, 3%, 12%);
+
+    /* Border Colors */
+    --border-gray: #d1d5db;
+    --border-light: rgba(0, 0, 0, 0.08);
+
+    /* Shadow Colors */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.2);
+    --shadow-active-light: rgba(220, 40, 40, 0.12);
+    --shadow-hover: rgba(239, 68, 68, 0.15);
+}
+
 body {
     width: 320px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: white;
+    background-color: var(--bg-white);
 }
 
 .yt-focus-container {
-    padding: 18px;
+    padding: 8px 16px;
+    width: 320px;
+    height: 592px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .yt-focus-header {
     text-align: center;
-    margin-bottom: 24px;
-    padding-bottom: 16px;
-    border-bottom: 2px solid rgb(220, 40, 40);
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--bg-active);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.yt-focus-mode-text {
-    font-size: 20px;
-    font-weight: 700;
-    color: black;
+.yt-focus-youtube-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .yt-focus-youtube-logo {
-    width: 40px;
+    width: 30px;
+}
+
+.yt-focus-mode-text {
+    font-size: 22px;
+    font-weight: 700;
+    margin-left: 10px;
 }
 
 .yt-focus-control-item {
-    background: white;
+    background: var(--bg-white);
     border-radius: 12px;
     padding: 14px 16px;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 6px 2px var(--shadow-light);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .yt-focus-control-item:hover {
-    box-shadow: 0 0 4px 6px rgba(220, 40, 40, 0.12);
+    box-shadow: 0 0 4px 6px var(--shadow-active-light);
     transform: translateY(-1px);
 }
 
 .yt-focus-control-label {
     font-size: 14px;
     font-weight: 500;
-    color: #1e3a4f;
+    color: var(--text-primary);
 }
 
 .yt-focus-switch {
     position: relative;
     width: 44px;
     height: 24px;
-    background-color: rgb(232, 232, 232);
+    background-color: var(--bg-switch-inactive);
     border-radius: 12px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .yt-focus-switch.active {
-    background: rgb(220, 40, 40);
+    background: var(--bg-active);
 }
 
 .yt-focus-switch::before {
@@ -74,11 +116,11 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: white;
+    background: var(--bg-white);
     top: 2px;
     left: 2px;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px var(--shadow-medium);
 }
 
 .yt-focus-switch.active::before {
@@ -87,9 +129,171 @@ body {
 
 .yt-focus-footer {
     text-align: center;
-    margin-top: 24px;
     padding-top: 12px;
-    border-top: 2px solid rgb(220, 40, 40);
+    border-top: 2px solid var(--bg-active);
     font-size: 12px;
-    color: #64748b;
+    color: var(--text-secondary);
+}
+
+.yt-focus-view-toggle {
+    display: flex;
+    width: 100%;
+    background: var(--bg-muted);
+    border-radius: 12px;
+}
+
+.yt-focus-toggle-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 12px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition:
+        background-color 200ms ease,
+        color 200ms ease,
+        transform 120ms ease;
+}
+
+.yt-focus-toggle-btn:hover {
+    color: var(--text-hover);
+}
+
+.yt-focus-toggle-btn:active {
+    transform: scale(0.98);
+}
+
+.yt-focus-toggle-btn.is-active {
+    background: var(--bg-active);
+    color: var(--text-active);
+}
+
+.yt-focus-toggle-btn-icon {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+}
+
+.yt-focus-view-panel {
+    display: none;
+}
+
+.yt-focus-view-panel.is-active {
+    display: block;
+}
+
+.yt-focus-stats-dropdown {
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.yt-focus-dropdown-trigger {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border-gray);
+    background: var(--bg-white);
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.yt-focus-dropdown-trigger svg {
+    transition: transform 300ms ease;
+}
+
+.dropdown-open .yt-focus-dropdown-trigger svg {
+    transform: rotate(180deg);
+}
+
+.yt-focus-dropdown-options {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-white);
+    border: 1px solid var(--border-gray);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    list-style: none;
+    padding: 4px 0;
+    margin: 0;
+    z-index: 10;
+}
+
+.yt-focus-dropdown-option {
+    font-size: 14px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 150ms, color 150ms;
+}
+
+.yt-focus-dropdown-option:hover {
+    background: var(--shadow-hover);
+    color: var(--bg-active);
+}
+
+.dropdown-open .yt-focus-dropdown-options {
+    display: block;
+}
+
+.yt-focus-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.yt-focus-stats .yt-focus-stat-card:hover {
+    background: var(--shadow-hover);
+    color: var(--bg-active);
+}
+
+.yt-focus-stat-card {
+    padding: 14px;
+    border-radius: 12px;
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    box-shadow: 0 0 6px 2px var(--shadow-light);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.yt-focus-stat-label,
+.yt-focus-stat-hint {
+    font-size: 14px;
+    color: var(--text-tertiary);
+}
+
+.yt-focus-stat-value {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.yt-focus-stat-label,
+.yt-focus-stat-value {
+    margin-bottom: 4px;
+}
+
+.yt-focus-stat-label,
+.yt-focus-stat-value,
+.yt-focus-stat-hint {
+    transition: color 100ms;
 }

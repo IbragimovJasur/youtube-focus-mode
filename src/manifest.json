@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "YouTube Focus Mode – No Distractions",
+    "name": "YouTube Focus Mode: Block Shorts, Feed & Comments | Free Open Source",
     "description": "Open source extension designed to make YouTube productive and distraction-free",
     "version": "1.0.0",
     "icons": {
@@ -29,6 +29,10 @@
                 "https://www.youtube.com/*"
             ],
             "js": [
+                "scripts/features/on-watch-recommendations.js",
+                "scripts/features/home-feed.js",
+                "scripts/features/shorts.js",
+                "scripts/storage.js",
                 "scripts/content.js"
             ],
             "css": [
